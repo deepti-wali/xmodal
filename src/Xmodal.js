@@ -45,7 +45,7 @@ const XModal = () => {
   };
 
   const handleCloseModal = (e) => {
-    if (e.target.className === "modal") {
+    if (e.target.className === "submit-button") {
       setIsOpen(false);
     }
   };
@@ -89,7 +89,8 @@ const XModal = () => {
               <label htmlFor="phone">Phone Number:</label>
               <br />
               <br />
-
+              <br />
+              <br />
               <input
                 type="tel"
                 id="phone"
