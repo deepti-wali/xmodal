@@ -1,0 +1,15 @@
+.modal {
+  display: flex;
+
+  align-items: center;
+  justify-content: left;
+}
+
+.modal-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.app {
+}
