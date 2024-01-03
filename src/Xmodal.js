@@ -45,7 +45,10 @@ const XModal = () => {
   };
 
   const handleCloseModal = (e) => {
-    if (e.target.className === "modal") {
+    if (
+      e.target.className === "modal" ||
+      e.target.className === "modal-content"
+    ) {
       setIsOpen(false);
     }
   };
