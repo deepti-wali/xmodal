@@ -40,89 +40,88 @@ const XModal = () => {
     }
   };
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (e) => {
+    // if (e.target.className === "modal") {
     setIsOpen(true);
+    // }
   };
 
   const handleCloseModal = (e) => {
-    if (
-      e.target.className === "modal" ||
-      e.target.className === "modal-content"
-    ) {
+    if (e.target.className === "modal-content") {
       setIsOpen(false);
     }
   };
 
   return (
-    <div className="app">
+    <div className="modal">
       <button onClick={handleOpenModal} className="submit-button">
         Open Form
       </button>
       <h1>User Details Modal</h1>
 
       {isOpen && (
-        <div className="modal" onClick={handleCloseModal}>
-          <div className="modal-content">
-            <form onSubmit={handleSubmit}>
-              <h2> Fill Details</h2>
+        <div className="modal-content" onClick={handleCloseModal}>
+          {/* <div className="modal-content"> */}
+          <form onSubmit={handleSubmit}>
+            <h2> Fill Details</h2>
 
-              <label htmlFor="username">Username:</label>
-              <br />
-              <br />
-              <input
-                type="text"
-                id="username"
-                value={formData.username}
-                onChange={handleInputChange}
-                required
-              />
-              <br />
-              <br />
+            <label htmlFor="username">Username:</label>
+            <br />
+            <br />
+            <input
+              type="text"
+              id="username"
+              value={formData.username}
+              onChange={handleInputChange}
+              required
+            />
+            <br />
+            <br />
 
-              <label htmlFor="email">Email:</label>
-              <br />
-              <br />
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-              <br />
-              <br />
-              <label htmlFor="phone">Phone Number:</label>
-              <br />
-              <br />
+            <label htmlFor="email">Email:</label>
+            <br />
+            <br />
+            <input
+              type="email"
+              id="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            <br />
+            <br />
+            <label htmlFor="phone">Phone Number:</label>
+            <br />
+            <br />
 
-              <input
-                type="tel"
-                id="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-              <br />
-              <br />
+            <input
+              type="tel"
+              id="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+            />
+            <br />
+            <br />
 
-              <label htmlFor="dob">Date of Birth:</label>
-              <br />
-              <br />
-              <input
-                type="date"
-                id="dob"
-                value={formData.dob}
-                onChange={handleInputChange}
-                required
-              />
-              <br />
-              <br />
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
-          </div>
+            <label htmlFor="dob">Date of Birth:</label>
+            <br />
+            <br />
+            <input
+              type="date"
+              id="dob"
+              value={formData.dob}
+              onChange={handleInputChange}
+              required
+            />
+            <br />
+            <br />
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
+          </form>
         </div>
+        // </div>
       )}
     </div>
   );
