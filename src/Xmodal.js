@@ -265,10 +265,10 @@ const XModal = () => {
 
   return (
     <div className="app">
+      <h1>User Details Modal</h1>
       <button onClick={handleOpenModal} className="submit-button">
         Open Form
       </button>
-      <h1>User Details Modal</h1>
 
       {isOpen && (
         <div className="modal" onClick={handleCloseModal}>
@@ -277,8 +277,6 @@ const XModal = () => {
               <h2> Fill Details</h2>
 
               <label htmlFor="username">Username:</label>
-              <br />
-              <br />
               <input
                 type="text"
                 id="username"
@@ -287,11 +285,8 @@ const XModal = () => {
                 required
               />
               <br />
-              <br />
 
               <label htmlFor="email">Email:</label>
-              <br />
-              <br />
               <input
                 type="email"
                 id="email"
@@ -300,11 +295,7 @@ const XModal = () => {
                 required
               />
               <br />
-              <br />
               <label htmlFor="phone">Phone Number:</label>
-              <br />
-              <br />
-
               <input
                 type="tel"
                 id="phone"
@@ -313,11 +304,7 @@ const XModal = () => {
                 required
               />
               <br />
-              <br />
-
               <label htmlFor="dob">Date of Birth:</label>
-              <br />
-              <br />
               <input
                 type="date"
                 id="dob"
@@ -325,7 +312,6 @@ const XModal = () => {
                 onChange={handleInputChange}
                 required
               />
-              <br />
               <br />
               <button type="submit" className="submit-button">
                 Submit
